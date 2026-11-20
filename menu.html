@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | Cilok Gajahan</title>
+  <meta name="description" content="Cilok Gajahan: cilok, sempol, dan olos sejak 2016. Terbuka untuk kemitraan.">
+  <link rel="icon" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<section class="page-hero"><div class="wrap"><p class="crumb"><a href="index.html">Beranda</a> &rsaquo; Menu</p><h1>Menu</h1><p class="phs">Cilok, sempol, dan olos pilihan kamu.</p></div></section>
+<section class="sec"><div class="wrap v-layout"><aside class="v-nav" aria-label="Kategori menu"><ul><li><a href="#m1" class="on">Cilok Mateng</a></li><li><a href="#m2">Sempol &amp; Olos</a></li><li><a href="#m3">Frozen</a></li></ul></aside><div><article id="m1" class="v-item mcat" style="display:block"><h2>Cilok Mateng</h2><div class="ph photo" style="--img:url(images/cilok.jpg)"></div><div class="m-item"><div><h3>Cilok Gajahan Mateng Porsi Kecil</h3><p>Termasuk saos, kecap, dan sambal.</p></div><div class="price">Rp13.000</div><div class="m-order"><a class="wa-btn" data-wa="Halo Cilok Gajahan, saya mau pesan Cilok Gajahan Mateng Porsi Kecil." target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a><a class="gf-btn" data-gofood>Pesan via GoFood</a></div></div><div class="m-item"><div><h3>Cilok Gajahan Mateng Porsi Besar</h3><p>Termasuk saos, kecap, dan sambal.</p></div><div class="price">Rp25.500</div><div class="m-order"><a class="wa-btn" data-wa="Halo Cilok Gajahan, saya mau pesan Cilok Gajahan Mateng Porsi Besar." target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a><a class="gf-btn" data-gofood>Pesan via GoFood</a></div></div></article><article id="m2" class="v-item mcat" style="display:block"><h2>Sempol &amp; Olos</h2><div class="ph photo" style="--img:url(images/sempol.jpg)"></div><div class="m-item"><div><h3>Sempol Goreng Premium Porsi Kecil</h3><p>Lebih banyak daging ayam.</p></div><div class="price">Rp9.500</div><div class="m-order"><a class="wa-btn" data-wa="Halo Cilok Gajahan, saya mau pesan Sempol Goreng Premium Porsi Kecil." target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a><a class="gf-btn" data-gofood>Pesan via GoFood</a></div></div><div class="m-item"><div><h3>Sempol Ayam Premium Porsi Besar</h3><p>Lebih banyak daging ayam.</p></div><div class="price">Rp18.500</div><div class="m-order"><a class="wa-btn" data-wa="Halo Cilok Gajahan, saya mau pesan Sempol Ayam Premium Porsi Besar." target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a><a class="gf-btn" data-gofood>Pesan via GoFood</a></div></div><div class="m-item"><div><h3>Olos Goreng Jingkrak</h3><p>Olos goreng varian Jingkrak.</p></div><div class="price">Rp18.000</div><div class="m-order"><a class="wa-btn" data-wa="Halo Cilok Gajahan, saya mau pesan Olos Goreng Jingkrak." target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a><a class="gf-btn" data-gofood>Pesan via GoFood</a></div></div></article><article id="m3" class="v-item mcat" style="display:block"><h2>Frozen</h2><div class="ph photo contain" style="--img:url(images/frozen.jpg)"></div><div class="m-item"><div><h3>Olos Jingkrak Frozen</h3><p>Versi beku untuk dibawa pulang dan disimpan.</p></div><div class="price">Rp29.000</div><div class="m-order"><a class="wa-btn" data-wa="Halo Cilok Gajahan, saya mau pesan Olos Jingkrak Frozen." target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a><a class="gf-btn" data-gofood>Pesan via GoFood</a></div></div></article><p class="note">Harga mengikuti daftar di GoFood dan dapat berbeda di outlet. Silakan konfirmasi harga terbaru sebelum memesan.</p><p style="margin-top:20px"><a class="btn" data-gofood>Pesan via GoFood</a></p></div></div></section>
+</main>
+<script src="site.js"></script>
+<script>
+const links=[...document.querySelectorAll('.v-nav a')],items=document.querySelectorAll('.v-item');
+const setOn=id=>links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')=='#'+id));
+const spy=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)setOn(e.target.id);}),{rootMargin:'-30% 0px -60% 0px'});
+items.forEach(i=>spy.observe(i));
+</script>
+</body>
+</html>

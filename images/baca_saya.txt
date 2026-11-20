@@ -1,0 +1,1 @@
+Letakkan foto di folder ini. Pasang dengan style="--img:url(images/namafile.jpg)" dan tambahkan class photo.
